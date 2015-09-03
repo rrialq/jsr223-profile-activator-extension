@@ -37,6 +37,17 @@
         <tag>HEAD</tag>
     </scm>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>localhost</id>
+            <url>http://localhost:8081/nexus/content/repositories/coutemeier-maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>localhost</id>
+            <url>http://localhost:8081/nexus/content/repositories/coutemeier-maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.maven</groupId>
@@ -107,10 +118,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
                 <configuration>
                     <source>1.6</source>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -171,7 +184,6 @@
         <maven.compat.version>3.3.3</maven.compat.version>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-        <maven.deploy.skip>true</maven.deploy.skip>
         <license.licenseName>apache_v2</license.licenseName>
     </properties>
 </project>
