@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.coutemeier.maven</groupId>
     <artifactId>jsr223-profile-activator-extension</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
 
     <organization>
         <name>RRQ</name>
@@ -154,26 +154,6 @@
                         <link>http://docs.oracle.com/javase/6/docs/api/</link>
                     </links>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>de.jutzig</groupId>
-                <artifactId>github-release-plugin</artifactId>
-                <version>1.1.0</version>
-                <executions>
-                    <execution>
-                        <id>github-upload</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>release</goal>
-                        </goals>
-                        <inherited>false</inherited>
-                        <configuration>
-                            <releaseName>v${project.version}</releaseName>
-                            <tag>${project.version}</tag>
-                            <artifact>${project.build.directory}/${project.artifactId}-${project.version}.jar</artifact>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
