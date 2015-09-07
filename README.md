@@ -25,7 +25,7 @@ The expression manager is a simplified vision of the Maven interpolator. The exp
 You can use the expression manager as an object in the script language; its default name is ```aitor```.
 
 ### The interpolated expression
-The interpolated expression if the object returned by the expression manager. It encapsulates the interpolated value, and it has some methods to get the interpolated value or a default value, String, boolean or int, directly.
+The interpolated expression is the object returned by the expression manager. It encapsulates the interpolated value, and it has some methods to get the interpolated value or a default value, String, boolean or int, directly.
 
 ## Install the extension
 You need to copy the following file to the folder ```${MAVEN_HOME}/lib/ext```:
