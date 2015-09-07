@@ -19,7 +19,7 @@ Instead of changing the schema of Project Object Model (or POM) this extension w
 The ```value``` tag of the property profile activator is the script to execute. Last sentence in script will return a boolean value, ```true``` to activate the profile, ```false``` otherwise.
 
 ## Which properties are visible
-The following set of properties are visible (are project properties and user properties are experimental):
+The following set of properties are visible (project properties and user properties are experimental):
 * System properties.
 * Project properties
 * User properties.
