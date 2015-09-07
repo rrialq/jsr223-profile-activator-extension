@@ -78,7 +78,7 @@ For example, instead of the ```&&``` you must write ```&amp;&amp;```
                 var reportsLevel = aitor.eval('${REPORTS_LEVEL}').getInt(0);
                 var siteUrl = aitor.eval('${SITE_URL}').getString('');
                 var siteDefined = ( siteUrl != '' );
-                mySiteSkip &amp;&amp; reportsEnabled && ( reportsLevel > 0 ) && siteDefined
+                mySiteSkip &amp;&amp; reportsEnabled &amp;&amp; ( reportsLevel > 0 ) &amp;&amp; siteDefined
             </value>
         </property>
 ```
