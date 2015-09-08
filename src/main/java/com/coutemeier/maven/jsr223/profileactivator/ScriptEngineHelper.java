@@ -36,7 +36,7 @@ public final class ScriptEngineHelper {
     /**
      * The name of the property to supply the interpolator variable name.
      */
-    private static final String JSR223_PROPERTY_NAME = "jsr223.name";
+    private static final String JSR223_PROPERTY_NAME = "jsr223.profile.activator.name";
 
     /**
      * The default name of the interpolator variable, if none supplied.
