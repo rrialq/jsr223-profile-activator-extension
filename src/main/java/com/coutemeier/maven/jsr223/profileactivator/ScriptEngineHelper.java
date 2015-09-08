@@ -34,7 +34,7 @@ import org.apache.maven.model.profile.ProfileActivationContext;
  */
 public final class ScriptEngineHelper {
     /**
-     * The name of the property to supply the interpolator variable name.
+     * The name of the property to inject in script to use the expression manager.
      */
     private static final String JSR223_PROPERTY_NAME = "jsr223.profile.activator.name";
 
