@@ -33,9 +33,19 @@ You can use the expression manager as an object in the script language; its defa
 ### The interpolated expression
 The interpolated expression is the object returned by the expression manager. It encapsulates the interpolated value, and it has some methods to get the interpolated value or a default value, String, boolean or int, directly.
 
-## Install the extension
-You need to copy the following file to the folder ```${MAVEN_HOME}/lib/ext```:
-* jsr223-profile-activator-extension-${version}.jar
+## How to use
+Since 0.2.0 version the extension supports the ```.mvn/extensions.xml``` configuration:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions>
+    ...
+    <extension>
+        <groupId>com.coutemeier.maven</groupId>
+        <artifactId>jsr223-profile-activator-extension</artifactId>
+        <version>0.2.0-SNAPSHOT</version>
+    </extension>
+</extensions>
+```
 
 ## Examples
 ### About the examples
