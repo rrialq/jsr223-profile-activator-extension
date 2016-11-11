@@ -42,7 +42,7 @@ Since 0.2.0 version the extension supports the ```.mvn/extensions.xml``` configu
     <extension>
         <groupId>com.coutemeier.maven</groupId>
         <artifactId>jsr223-profile-activator-extension</artifactId>
-        <version>0.2.0-SNAPSHOT</version>
+        <version>0.2.0</version>
     </extension>
 </extensions>
 ```
