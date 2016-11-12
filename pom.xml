@@ -166,4 +166,17 @@
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <license.licenseName>apache_v2</license.licenseName>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>disable-java8-doclint</id>
+            <activation>
+                <jdk>[1.8,)</jdk>
+            </activation>
+            <properties>
+                <additionalparam>-Xdoclint:none</additionalparam>
+            </properties>
+        </profile>
+    </profiles>
+
 </project>
