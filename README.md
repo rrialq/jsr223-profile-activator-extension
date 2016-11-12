@@ -57,22 +57,32 @@ For example, instead of the ```&&``` you must write ```&amp;&amp;```
 <profiles>
     <profile>
         <id>MY_SITE_SKIP_ACTIVATED</id>
-        <property>
-            <name>MY_SITE_SKIP</name>
-            <value>true</value>
-        </property>
+        <activation>
+            <property>
+                <name>MY_SITE_SKIP</name>
+                <value>true</value>
+            </property>
+        </activation>
+        ...
+    </profile>
+</profiles>
 ```
 ### The above example written with jsr223-profile-activator-extension
 ```xml
 <profiles>
     <profile>
         <id>MY_SITE_SKIP_ACTIVATED</id>
-        <property>
-            <name>=</name>
-            <value>
-                aitor.eval('${MY_SITE_SKIP}').getBoolean(false);
-            </value>
-        </property>
+        <activation>
+            <property>
+                <name>=</name>
+                <value>
+                    aitor.eval('${MY_SITE_SKIP}').getBoolean(false);
+                </value>
+            </property>
+        </activation>
+        ...
+    </profile>
+</profiles>
 ```
 
 ### Of course, it is a script...
@@ -80,15 +90,20 @@ For example, instead of the ```&&``` you must write ```&amp;&amp;```
 <profiles>
     <profile>
         <id>MY_SITE_SKIP_ACTIVATED</id>
-        <property>
-            <name>=</name>
-            <value>
-                var mySiteSkip = aitor.eval('${MY_SITE_SKIP}').getBoolean(false);
-                var reportsEnabled = aitor.eval('${REPORTS_ENABLED}').getBoolean(false);
-                var reportsLevel = aitor.eval('${REPORTS_LEVEL}').getInt(0);
-                var siteUrl = aitor.eval('${SITE_URL}').getString('');
-                var siteDefined = ( siteUrl != '' );
-                mySiteSkip &amp;&amp; reportsEnabled &amp;&amp; ( reportsLevel > 0 ) &amp;&amp; siteDefined
-            </value>
-        </property>
+        <activation>
+            <property>
+                <name>=</name>
+                <value>
+                    var mySiteSkip = aitor.eval('${MY_SITE_SKIP}').getBoolean(false);
+                    var reportsEnabled = aitor.eval('${REPORTS_ENABLED}').getBoolean(false);
+                    var reportsLevel = aitor.eval('${REPORTS_LEVEL}').getInt(0);
+                    var siteUrl = aitor.eval('${SITE_URL}').getString('');
+                    var siteDefined = ( siteUrl != '' );
+                    mySiteSkip &amp;&amp; reportsEnabled &amp;&amp; ( reportsLevel > 0 ) &amp;&amp; siteDefined
+                </value>
+            </property>
+        </activation>
+        ...
+    </profile>
+</profiles>
 ```
