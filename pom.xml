@@ -122,7 +122,7 @@
                     <cloneClean>true</cloneClean>
                     <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
                     <goals>
-                        <goal>help:active-profiles</goal>
+                        <goal>${help.active-profiles}</goal>
                     </goals>
                     <invokerPropertiesFile>invoker.properties</invokerPropertiesFile>
                     <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
@@ -189,6 +189,8 @@
         <maven.compat.version>3.3.3</maven.compat.version>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+        <maven.help.version>2.2</maven.help.version>
+        <help.active-profiles>org.apache.maven.plugins:maven-help-plugin:${maven.help.version}:active-profiles</help.active-profiles>
         <license.licenseName>apache_v2</license.licenseName>
     </properties>
 
